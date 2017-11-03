@@ -40,7 +40,11 @@ def personalized_page_rank(seeds, trans_2d_list, alpha=0.9):
     # Calculate PR Vector with Formula Iteratively
     # pr_new = alpha * TransitionMatrix * pr_old + (1 - alpha) * SeedVector
     for i in range(0, ITERATION_TIME):
-        pr_vector = alpha * trans_matrix * pr_vector + (1 - alpha) * seed_vector
+        # Set Previous PR Vector
+        prev_pr_vector = pr_vector
+        # Calculate New PR Vector
+        pr_vector = alpha * trans_matrix * prev_pr_vector + (1 - alpha) * seed_vector
+        # Compare the Difference Between Previous and New Vectors
 
     pr_list = pr_vector.tolist()
     # Return the Final PageRank Score Vector
