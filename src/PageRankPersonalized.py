@@ -6,6 +6,9 @@ import numpy as np
 # Iteration Time for Random Walk
 # Default - Iteration Time is Set to 20
 ITERATION_TIME = 20
+# Iteration Delta for Random Walk
+# Default - Iteration Delta is Set to (1e-10) / (1 * 10 ** -10)
+ITERATION_DELTA = 1e-10
 
 
 # Personalized PageRank Function
