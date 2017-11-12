@@ -57,7 +57,6 @@ def rwr_page_rank(seeds, trans_2d_list, alpha=0.9):
             pr_diff = (np.absolute(prev_vector - pr_vector)).tolist()
             # If the difference in each dimension is less than ITERATION_DELTA, break
             count = 0  # Counter for values that satisfy (diff < DELTA)
-            print(pr_diff)
             for j in range(0, row_num):
                 if pr_diff[j][0] < ITERATION_DELTA:
                     count += 1
